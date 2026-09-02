@@ -1,0 +1,28 @@
+PORTFOLIO QUALITY CONTROL — V1.0
+
+STATUS: APPLICATION-READY WITH EVIDENCE NOTE
+
+Checks performed:
+- Required portfolio pages present: PASS
+- Internal HTML asset references after cleanup: PASS
+- Placeholder scan: PASS
+- Old duplicate CVs removed: PASS
+- Final CVs retained: 5
+
+Final CV files:
+Ali_Abdulhafidh_Digital_Virtual_Assistant_CV_FINAL.docx
+Ali_Abdulhafidh_Content_Creator_CV_FINAL.docx
+Ali_Abdulhafidh_Master_CV_FINAL.docx
+Ali_Abdulhafidh_Social_Media_Manager_CV_FINAL.docx
+Ali_Abdulhafidh_Web_Front-End_CV_FINAL.docx
+
+Important portfolio integrity note:
+- The 9-to-5 Escape Plan is the primary social-media case study.
+- NextGen Agrifarm and Busbul Trading Company are self-directed practice projects and must not be presented as client work or public launches without supporting evidence.
+- Analytics claims should only use supplied/documented metrics.
+- The portfolio should be visually inspected in a browser before publishing, especially responsive/mobile layouts and screenshot rendering.
+
+QC actions completed:
+- Removed old duplicate CV files from the package.
+- Removed the missing script.js reference from index.html when script.js was not present.
+- Kept the final CV download files in the package.

@@ -1,0 +1,25 @@
+FINAL PORTFOLIO STRUCTURE
+
+Primary positioning:
+Ali Abdulhafidh
+Social Media Content Strategist | Content Creator | Social Media VA
+
+Secondary capabilities:
+Digital/Virtual Assistance | Junior Web/Front-End Support
+
+Case studies:
+01 The 9-to-5 Escape Plan — social media/content
+02 NextGen Agrifarm — self-directed website/front-end practice
+03 Busbul Trading Company — self-directed commercial digital practice
+
+Integrity:
+Self-directed projects must remain clearly labelled as practice projects unless new evidence supports client/public-launch claims.
+
+Evidence folders:
+evidence/case-study-1-9to5/
+evidence/case-study-2-nextgen/
+evidence/case-study-3-busbul/
+
+Contact:
+binabdulhafidh@gmail.com
+https://www.linkedin.com/in/ali-karama-b4a8488b

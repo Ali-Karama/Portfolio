@@ -1,0 +1,9 @@
+const STORAGE_KEY='aliPortfolioEvidenceV2';
+const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{"case1":[],"case2":[],"case3":[]}');
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));render()}
+function id(){return Date.now().toString(36)+Math.random().toString(36).slice(2)}
+function addFiles(files,key){[...files].filter(f=>f.type.startsWith('image/')).forEach(file=>{const r=new FileReader();r.onload=()=>{(state[key]??=[]).push({id:id(),name:file.name,data:r.result});save()};r.readAsDataURL(file)})}
+function render(){document.querySelectorAll('[data-gallery]').forEach(g=>{const items=state[g.dataset.gallery]||[];g.innerHTML=items.length?'':'<div class="empty-evidence">No screenshots added yet.<br><small>Choose screenshots or drag them into the box above.</small></div>';items.forEach(item=>{const f=document.createElement('figure');f.className='uploaded-evidence';f.innerHTML=`<img src="${item.data}" alt="${item.name}"><figcaption><strong>${item.name}</strong><button type="button" data-remove="${item.id}" data-case="${g.dataset.gallery}">Remove</button></figcaption>`;g.appendChild(f)})})}
+document.addEventListener('change',e=>{if(e.target.matches('.evidence-input'))addFiles(e.target.files,e.target.dataset.case)});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-remove]');if(!b)return;state[b.dataset.case]=(state[b.dataset.case]||[]).filter(x=>x.id!==b.dataset.remove);save()});
+document.addEventListener('DOMContentLoaded',()=>{render();document.querySelectorAll('.dropzone').forEach(z=>{['dragenter','dragover'].forEach(ev=>z.addEventListener(ev,e=>{e.preventDefault();z.classList.add('dragging')}));['dragleave','drop'].forEach(ev=>z.addEventListener(ev,e=>{e.preventDefault();z.classList.remove('dragging')}));z.addEventListener('drop',e=>addFiles(e.dataTransfer.files,z.dataset.case))})});
