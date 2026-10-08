@@ -544,6 +544,74 @@ p {
   letter-spacing: 2px;
 }
 
+/* =========================
+   PROBLEM-SOLVING DROPDOWN
+========================= */
+
+.problem-solving {
+  margin-top: 32px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.problem-solving summary {
+  list-style: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--green);
+
+  transition: color 0.25s ease;
+}
+
+.problem-solving summary::-webkit-details-marker {
+  display: none;
+}
+
+.problem-solving summary:hover {
+  color: var(--gold);
+}
+
+.dropdown-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--line);
+  border-radius: 50%;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.problem-solving[open] .dropdown-icon {
+  transform: rotate(45deg);
+  background: var(--green);
+  color: var(--white);
+}
+
+.problem-solving-content {
+  padding: 0 0 28px;
+}
+
+.problem-solving-content .cards {
+  margin-top: 0;
+}
 /* =========================================================
    10. SECTION HEADINGS
    ========================================================= */
